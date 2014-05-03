@@ -5,8 +5,6 @@
 #include "cocosbuilder/CCLayerLoader.h"
 #include "cocosbuilder/CCBMemberVariableAssigner.h"
 #include "UIButton.h"
-#include "Burger.h"
-#include "Mana.h"
 
 using namespace std;
 USING_NS_CC;
@@ -14,23 +12,24 @@ using namespace cocosbuilder;
 
 class GameScene : public Layer, public CCBMemberVariableAssigner
 {
-    Node* laneA;
-    Node* laneB;
-    float flickCounter;
-    Point touchBegan;
-    Node* manaA;
-    list<Mana*> flyingManas;
-    list<Burger*> burgers;
-    float spawnCounter;
 public:
+
+    enum class Tile
+    {
+        HIDE,
+    };
+
     static Scene* createScene();
     virtual bool init();
     ~GameScene(){};
     CREATE_FUNC(GameScene);
-    bool onTouchBegan(Touch* touch, Event* event);
     void onTouchEnded(Touch* touch, Event* event);
     virtual bool onAssignCCBMemberVariable(Ref* pTarget, const char* pMemberVariableName, Node* pNode);
     void update(float dt);
+private:
+    int row;
+    int col;
+    vector<vector<Tile>> tiles;
 };
 
 class GameSceneLoader : public LayerLoader
