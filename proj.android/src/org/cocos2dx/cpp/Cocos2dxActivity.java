@@ -145,7 +145,7 @@ public class Cocos2dxActivity extends NativeActivity{
   @Override
   protected void onStart() {
       super.onStart();
-      FlurryAgent.onStartSession(this, "ZJZQ9YBJDQG44WY48ZXV");
+      FlurryAgent.onStartSession(this, "ND8K39HGTQJ339MWR5FS");
       gameHelper.onStart(this);
   }
 
@@ -197,7 +197,7 @@ public class Cocos2dxActivity extends NativeActivity{
         }
         adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId("ca-app-pub-9353254478629065/9754907431");
+        adView.setAdUnitId("ca-app-pub-9353254478629065/3928699834");
         handler.post(new Runnable() {
             public void run() {
                 /*

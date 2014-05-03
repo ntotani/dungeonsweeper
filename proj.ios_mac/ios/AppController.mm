@@ -17,7 +17,7 @@ static AppDelegate s_sharedApplication;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [Flurry setCrashReportingEnabled:YES];
-    [Flurry startSession:@"442266FH3VGQSYTGXBYN"];
+    [Flurry startSession:@"HJB5VRD77442F76C3FCX"];
     
     // Override point for customization after application launch.
 
@@ -59,7 +59,7 @@ static AppDelegate s_sharedApplication;
 
     CGPoint origin = CGPointMake((viewController.view.frame.size.width - GAD_SIZE_320x50.width) / 2, viewController.view.frame.size.height - GAD_SIZE_320x50.height);
     bannerView_ = [[[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin] autorelease];
-    bannerView_.adUnitID = @"ca-app-pub-9353254478629065/3708373835";
+    bannerView_.adUnitID = @"ca-app-pub-9353254478629065/9556431037";
     [viewController.view addSubview: bannerView_];
     [bannerView_ setRootViewController:viewController];
     GADRequest *request = [GADRequest request];
